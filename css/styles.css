@@ -1,0 +1,869 @@
+/* set all fonts white, and to Heebo with serif as a backup */
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Heebo', serif;
+  color: #fff
+}
+p,a,li,figcaption{
+  font-family: 'Heebo', serif;
+  color: #fff;
+}
+/* set the whole page to have a background image, and remove the default margin */
+body{
+  background-image: url("../img/backdrop.jpg");
+  background-size: contain;
+  margin: 0px;
+}
+/* set the header to be the generic flex container setup, give it a background image, a border, and set it to always stay at the top of the page */
+header{
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  background-image: url('../img/bg-1.png');
+  background-position: 50% 25%;
+  border: solid 2px #fff;
+}
+/* set the div with the images to have the flex priority, and make it a flex container of its own */
+header div{
+  flex-grow: 1;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+}
+/* set the images to a specific size */
+header div img{
+  height: 5.2vw;
+}
+/* give the second image padding to make it centered */
+header div img:nth-child(2){
+  padding: 2px 0px 2px 9vw;
+}
+/* give the nav a margin to the right */
+header nav{
+  margin-right: 15px;
+}
+/* get rid of the list style, and make it a flex container */
+header nav ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0px;
+}
+/* give each list element its own horizontal padding */
+header nav ul li{
+  padding: 0px 15px;
+}
+/* get rid of the underline, increase font size, and make it look like a GameBoy screen */
+header nav ul li a{
+  text-decoration: none;
+  font-size: 20px;
+  color: #000;
+  padding: 15px;
+  border: solid 2px #6d5f70;
+  border-radius: 5px;
+  border-bottom-right-radius: 15px;
+  background-color: #b9ffb9
+}
+/* set the padding to the top so it makes the fixed header look natural, and make the background more dark */
+main{
+  padding-top: 110px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+/* set the width and background image for the masthead */
+.masthead{
+  margin: auto;
+  width: 70%;
+  background-image: url('../img/take2.jpg');
+  background-size: cover;
+}
+/* set the text to a certain size, give it padding, align in the middle, give it some text shadow and make the background darker */
+.masthead div h1{
+  margin: 0px;
+  font-size: 95px;
+  text-align: center;
+  padding: 3% 20%;
+  text-shadow: 4px 4px 12px #000;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+/* set the width, margin, and background image for the masthead on the product page */
+.mastheadproduct{
+  margin: auto;
+  width: 60%;
+  background-image: url('../img/games1.jpg');
+  background-position: left center;
+  background-size: cover;
+  margin-bottom: 30px;
+}
+/* set the text to a certain size, give it padding, align in the middle, give it some text shadow and make the background darker */
+.mastheadproduct div h1{
+  margin: 0px;
+  font-size: 95px;
+  text-align: center;
+  padding: 3% 14%;
+  text-shadow: 4px 4px 12px #000;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+/* for each section of content on the index page, make a grid container with 2 50% columns, and align + justify everything in the middle */
+.content{
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+/* set the size and shadow of the centered text */
+.content div h2,
+.content div h3{
+  text-align: center;
+  font-size: 50px;
+  text-shadow: 2px 1px 11px #fff;
+}
+/* for the anchors, remove the underline, give extra padding, a border, and darken the background */
+.content div h3 a{
+  text-decoration: none;
+  padding: 0px 10px;
+  border: 2px solid #6d5f70;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* when its hovered over, set the font to black, and the background to white for contrast */
+.content div h3 a:hover{
+  color: #000;
+  background-color: #fff;
+  text-shadow: 0px 0px 3px #000;
+}
+/* each image on the index page is centered, and set to a specific size */
+.content div img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 31vw;
+  width: auto;
+}
+/* make the last piece of content only one column */
+.last{
+  grid-template-columns: 100%;
+  display: flex;
+}
+/* set the margin to 0 on the font in the last piece of content on the index page */
+.last div h2{
+  margin: 0px;
+}
+/* make the text with the price a yellow colour with a black shadow, and the highlight removed, and make it slightly bigger than the rest */
+.last div h2 mark,
+.endOfProduct h2 mark{
+  background-color: rgba(0,0,0,0);
+  color: yellow;
+  text-shadow: 4px 4px 12px #000;
+  font-size: 75px;
+}
+.last img{
+  height: 150px;
+  width: auto;
+}
+/* give the divs in the first part of content padding to make it look in the middle */
+.part1 div:first-child{
+  padding-left: 150px;
+}
+.part1 div:nth-child(2){
+  padding-right: 150px;
+}
+/* swap the order of the divs in the second and fourth sections of content */
+.part2 div:first-child,
+.part4 div:first-child{
+  order: 2;
+}
+.part2 div:nth-child(2),
+.part4 div:nth-child(2){
+  order: 1;
+}
+/* give the div with the text extra padding */
+.part2 div:first-child{
+  padding-right: 150px;
+}
+/* give the div with the text extra padding */
+.part3 div:first-child{
+  padding-left: 100px;
+}
+/* give the footer a background image and a border, and make it a grid container */
+footer{
+  border: solid 5px white;
+  background-image: url("../img/backdrop2.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  align-items: center;
+  justify-content: center;
+}
+/* set the margin of each div to auto */
+footer div{
+  margin: auto;
+}
+/* align the text in the center, give a margin, and make the font size bigger */
+footer div p{
+  text-align: center;
+  font-size: 20px;
+  margin: 20px;
+}
+/* set the image to be a specific size, and give it padding */
+footer div img {
+  padding: 10px 0px;
+  height: 12vw;
+}
+/* make each section with the game class a grid container with 2 50% columns */
+.game{
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+/* set the margin to auto for all divs */
+.game div{
+  margin: auto;
+}
+/* in each second div, make another grid container with 2 50% columns for the images */
+.game div:nth-child(2){
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+/* set the images to be most of, but not all of the grid container, plus some additional margin on the bottom */
+.game div img{
+  margin: auto;
+  width: 90%;
+  height: 90%;
+  margin-bottom: 20px;
+}
+/* for each header, align it in the middle, set the font size, and give a white textshadow */
+.game div h2{
+  text-align: center;
+  font-size: 50px;
+  text-shadow: 2px 1px 11px #fff;
+}
+/* for each paragraph element, do the same as above, plus set additional padding and margin, as well as set the background colour darker, and make an invisible border so the box will have ruonded corners */
+.game div p{
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  font-size: 40px;
+  text-shadow: 2px 1px 11px #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: hidden 2px white;
+  border-radius: 6px;
+}
+/* specifically in the Pokemon section, set the grid columns to only one column */
+.pokemon div:nth-child(2){
+  grid-template-columns: 100%;
+}
+/* change the grid columns back to the way it originally was, only for the second row of pictures */
+.pokemon div:nth-child(2) div{
+  grid-template-columns: repeat(2, 50%);
+}
+/* for each evenly numbered section with the game class, set the second div to be ordered first, and vice-versa  */
+main section.game:nth-child(even) div:nth-child(2){
+  order: 1;
+}
+main section.game:nth-child(even) div:first-child{
+  order: 2;
+}
+/* set the grid columns for the final section to be only one column */
+.endOfProduct{
+  grid-template-areas: 100%;
+}
+/* align the text, set the font size, give a font shadow remove the margin and add padding on the bottom */
+.endOfProduct h2{
+  text-align: center;
+  font-size: 50px;
+  text-shadow: 2px 1px 11px #fff;
+  margin: 0px;
+  padding-bottom: 50px;
+}
+/* make the part with the price to be slightly bigger than the other text */
+.endOfProduct h2 mark{
+  font-size: 60px;
+}
+/* for the first piece of content in the about page, make a flex container and justify in the center */
+.company{
+  display: flex;
+  justify-content: center;
+}
+/* set the div to a specific width, and set a background image */
+.company div{
+  width: 60%;
+  background-image: url("../img/nintendo-america-hq.jpg");
+  background-size: cover;
+  background-position: center;
+}
+/* give the text a black text shadow, a set font size, some extra margin, and align center */
+.company div h2{
+  text-align: center;
+  text-shadow: 2px 1px 11px #000;
+  font-size: 40px;
+  margin-top: 15px;
+}
+.company div p{
+  text-align: center;
+  text-shadow: 2px 1px 11px #000;
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+/* in each presidents and developers sections, make a grid container with 2 50% columns, and some extra padding on the bottom */
+.pres,
+.devs{
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  padding-bottom: 50px;
+}
+/* set a font size, a white text shadow, align center and remove the bottom margin */
+.pres section h3,
+.devTitle h3{
+  text-shadow: 2px 1px 11px #fff;
+  font-size: 38px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+/* set a font size, a white text shadow and align center */
+.pres section h4,
+.devs section h4{
+  text-shadow: 2px 1px 11px #fff;
+  font-size: 35px;
+  text-align: center;
+}
+/* for the p elements, add margin, padding, a text shadow, set a font size, align center and do the same hidden border technique used on the product page */
+.pres section p,
+.devs section p{
+  margin: 20px;
+  padding: 20px;
+  text-shadow: 2px 1px 11px #fff;
+  font-size: 30px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: hidden 2px white;
+  border-radius: 6px;
+}
+/* for each image, set the height, and center it in the grid container */
+.pres section img,
+.devs section img{
+  height: 25vw;
+  width: auto;
+  display: block;
+  margin: auto;
+}
+/* for the titles in the contact and about pages, remove all margin, set a font size, align center, give a font shadow, add some padding and margin, and underline them */
+.contactTitle h1,
+.aboutTitle h1{
+  margin: 0px;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 2px 1px 11px #fff;
+  padding-top: 50px;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+/* create a grid container with two columns of 6:4 ratio, and add extra padding on the bottom */
+.contactInfo{
+  display: grid;
+  grid-template-columns: 40% 60%;
+  padding-bottom: 250px;
+}
+/* set a font size, align the font center, and add a white text shadow */
+.contactInfo h2{
+  font-size: 40px;
+  text-align: center;
+  text-shadow: 2px 1px 11px #fff;
+}
+.contactInfo p{
+  font-size: 25px;
+  text-align: center;
+  text-shadow: 2px 1px 11px #fff;
+}
+/* for the form, align the text in the middle, and set a font size (which really just increased the space between the inputs) */
+.formS form{
+  text-align: center;
+  font-size: 50px;
+}
+/* for the inputs to the form, add padding all around, set a black border, give additional margin, and set the font size */
+.formS form input{
+  padding: 5px;
+  border: solid 2px #000000;
+  border-radius: 15px;
+  margin: 5px;
+  font-size: 30px;
+}
+/* for all screens under 1440 pixels, apply the following statements */
+@media screen and (max-width: 1440px){
+  .masthead div h1{
+    font-size: 75px;
+  }
+  .game div h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 40px;
+  }
+  .game div p{
+    font-size: 30px;
+  }
+  .info,
+  .formS{
+    padding: 0px 30px;
+  }
+}
+/* for all screens under 1200 pixels, apply the following statements */
+@media screen and (max-width: 1200px){
+  header nav ul li a{
+    font-size: 13px;
+  }
+  .masthead div h1{
+    font-size: 63px;
+  }
+  .content div h2{
+    font-size: 40px;
+  }
+  .content div h3{
+    font-size: 40px;
+  }
+  .mastheadproduct div h1{
+    font-size: 90px;
+  }
+  .game div h2{
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .game div p{
+    font-size: 22px;
+  }
+  .endOfProduct h2{
+    font-size: 40px;
+  }
+  .contactTitle h1,
+  .aboutTitle h1{
+    padding-top: 0px;
+  }
+  .pres section p,
+  .devs section p{
+    font-size: 24px;
+  }
+}
+/* for all screens under 1024 pixels, apply the following statements */
+@media screen and (max-width: 1024px){
+  header div img:nth-child(2){
+    padding: 5px 0px;
+  }
+  .masthead div h1{
+    font-size: 54px;
+  }
+  .mastheadproduct div h1{
+    font-size: 70px;
+  }
+  .game div h2{
+    font-size: 29px;
+  }
+  .game div p{
+    font-size: 20px;
+  }
+  .endOfProduct h2 {
+    font-size: 35px;
+  }
+  .contactTitle h1,
+  .aboutTitle h1 {
+    font-size: 40px;
+  }
+  .company div h2{
+    font-size: 32px;
+  }
+  .company div p{
+    font-size: 26px;
+  }
+  .pres section h3,
+  .devTitle h3 {
+    font-size: 33px;
+  }
+  .pres section h4,
+  .devTitle h4 {
+    font-size: 30px;
+  }
+  .contactInfo h2{
+    font-size: 32px;
+  }
+  .contactInfo p{
+    font-size: 23px;
+  }
+  .formS form input{
+    font-size: 20px;
+  }
+  .last div h2 mark{
+    font-size: 60px;
+  }
+  .endOfProduct h2 mark{
+    font-size: 45px;
+  }
+}
+/* for all screens under 900 pixels, apply the following statements */
+@media screen and (max-width: 900px){
+  header nav ul{
+    margin: 20px;
+    padding: 0px;
+  }
+  main{
+    padding-top: 135px;
+  }
+  .masthead div h1 {
+    font-size: 50px;
+  }
+  .content div h2 {
+    font-size: 35px;
+  }
+  .content div h3 a {
+    font-size: 35px;
+  }
+  .part2 div:first-child {
+    padding-right: 97px;
+  }
+  .part3 div:first-child{
+    padding: 0px;
+  }
+  .last img {
+    height: 120px;
+    width: auto;
+  }
+  .game{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .game div p{
+    font-size: 17px;
+  }
+  .company div{
+    width: 80%;
+  }
+  .company div p {
+    font-size: 23px;
+  }
+  .pres section h4,
+  .devs section h4 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .pres section p,
+  .devs section p {
+    font-size: 19px;
+  }
+  .last div h2 mark{
+    font-size: 50px;
+  }
+  .endOfProduct h2 mark{
+    font-size: 35px;
+  }
+}
+/* for all screens under 768 pixels, apply the following statements */
+@media screen and (max-width: 768px){
+  /* make the header go in a column direction, and align items down the middle*/
+  header{
+    flex-direction: column;
+    align-items: center;
+  }
+  /* remove all previous margins */
+  header div{
+    margin: 0px;
+  }
+  header nav{
+    margin: 0px;
+  }
+  .masthead div h1 {
+    font-size: 45px;
+  }
+  .part1 div:first-child {
+    padding-left: 115px;
+  }
+  .content{
+    margin-top: 30px;
+    padding-bottom: 30px;
+  }
+  .content div h2,
+  .content div h3 {
+    font-size: 34px;
+  }
+  footer div p{
+    font-size: 16px;
+  }
+  /* reset the templates to only one column for the product page */
+  .game{
+    grid-template-columns: 100%;
+  }
+  /* set the order of the divs in the evenly numbered sections with the game class back to their original positions */
+  main section.game:nth-child(even) div:nth-child(2){
+    order: 2;
+  }
+  main section.game:nth-child(even) div:first-child{
+    order: 1;
+  }
+  .game div h2 {
+    font-size: 40px;
+    margin-top: 20px;
+  }
+  .game div p {
+    font-size: 30px;
+  }
+  .pres section h3, .devTitle h3 {
+    font-size: 35px;
+  }
+  .pres section p,
+  .devs section p {
+    font-size: 16px;
+  }
+  .contactInfo{
+    padding-bottom: 250px;
+  }
+}
+/* for all screens under 600 pixels, apply the following statements */
+@media screen and (max-width: 600px){
+  header div img {
+    height: 8.2vw;
+  }
+  .masthead{
+    width: 95%;
+  }
+  /* reset the templates to only one column for the index and about pages */
+  .content,
+  .pres,
+  .devs{
+    grid-template-columns: 100%;
+  }
+  .content div img{
+    height: 55vw;
+  }
+  /* set the order of the divs in classes part1, part2, part3 and part4 back to their original positions, and remove any padding */
+  .part1 div:first-child, .part2 div:first-child, .part3 div:first-child, .part4 div:first-child{
+    padding: 0px;
+    order: 1;
+  }
+  .part1 div:nth-child(2), .part2 div:nth-child(2), .part3 div:nth-child(2), .part4 div:nth-child(2){
+    padding: 0px;
+    order: 2;
+  }
+  .mastheadproduct div h1{
+    font-size: 41px;
+  }
+  .game div h2{
+    font-size: 32px;
+  }
+  .game div p{
+    font-size: 22px;
+  }
+  .info, .formS {
+    padding: 0px;
+  }
+  .pres section img,
+  .devs section img{
+    height: 50vw;
+  }
+  .pres section h3,
+  .devTitle h3 {
+    font-size: 34px;
+  }
+  .pres section h4,
+  .devs section h4 {
+    font-size: 32px;
+  }
+  .pres section p,
+  .devs section p {
+    font-size: 21px;
+  }
+  footer div p {
+    font-size: 15px;
+  }
+}
+/* for all screens under 480 pixels, apply the following statements */
+@media screen and (max-width: 480px){
+  .game div h2,
+  .endOfProduct h2 {
+    font-size: 25px;
+  }
+  .last img:first-child {
+    display: none;
+  }
+  .game div p {
+    font-size: 18px;
+  }
+  .pres section h3,
+  .devTitle h3 {
+    font-size: 30px;
+  }
+  .pres section h4,
+  .devs section h4 {
+    font-size: 26px;
+  }
+  .pres section p,
+  .devs section p {
+    font-size: 21px;
+  }
+  /* reset the templates to only one column for the contact page, and add padding below */
+  .contactInfo{
+    grid-template-columns: 100%;
+    padding-bottom: 100px;
+  }
+  .formS form{
+    padding: 0px 20px;
+  }
+}
+/* for all screens under 425 pixels, apply the following statements */
+@media screen and (max-width: 425px){
+  .masthead div h1 {
+    font-size: 34px;
+  }
+  .content div h2,
+  .content div h3 a{
+    font-size: 30px;
+  }
+  .mastheadproduct{
+    width: 80%;
+  }
+  .game div h2,
+  .endOfProduct h2 {
+    font-size: 23px;
+  }
+  .endOfProduct h2 {
+    padding: 0px 20px 50px 20px;
+  }
+  .game div p {
+    font-size: 15px;
+  }
+  footer div p{
+    font-size: 10px;
+  }
+  .contactTitle h1,
+  .aboutTitle h1 {
+    font-size: 34px;
+  }
+  .company div h2 {
+    font-size: 28px;
+  }
+  .company div p {
+    font-size: 20px;
+  }
+  .pres section h3,
+  .devTitle h3 {
+    font-size: 26px;
+  }
+  .pres section p,
+  .devs section p {
+    font-size: 18px;
+  }
+}
+/* for all screens under 375 pixels, apply the following statements */
+@media screen and (max-width: 375px){
+  header nav ul li a{
+    font-size: 10px;
+  }
+  .content div h2,
+  .content div h3 a {
+    font-size: 25px;
+  }
+  .content div h3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .mastheadproduct div h1 {
+    font-size: 39px;
+  }
+  .game div h2 {
+    font-size: 20px;
+  }
+  .game div p {
+    font-size: 13px;
+  }
+  .endOfProduct h2 {
+    padding: 20px 20px 50px 20px;
+  }
+  .company div h2 {
+    font-size: 25px;
+  }
+  .company div p {
+    font-size: 17px;
+  }
+  .pres section h3,
+  .devTitle h3 {
+    font-size: 23px;
+  }
+  .pres section h4,
+  .devs section h4 {
+    font-size: 22px;
+  }
+  .pres section p,
+  .devs section p {
+    font-size: 16px;
+  }
+  .contactInfo h2 {
+    margin-top: 10px;
+    font-size: 26px;
+  }
+  .contactInfo p {
+    font-size: 20px;
+  }
+  .formS form {
+    font-size: 40px;
+  }
+  .formS form input {
+    font-size: 18px;
+  }
+}
+/* for all screens under 320 pixels, apply the following statements */
+@media screen and (max-width: 320px){
+  header div img {
+    height: 9.2vw;
+  }
+  header nav ul li {
+    padding: 0px 7px;
+  }
+  header nav ul li a{
+    padding: 10px;
+  }
+  .masthead div h1 {
+    font-size: 25px;
+  }
+  .content div h2, .content div h3 a {
+    font-size: 18px;
+  }
+  .content div img {
+    height: 47vw;
+  }
+  .mastheadproduct div h1 {
+    font-size: 33px;
+  }
+  .game div p {
+    font-size: 12px;
+  }
+  .game div h2, .endOfProduct h2 {
+    font-size: 19px;
+  }
+  .contactTitle h1, .aboutTitle h1 {
+    font-size: 30px;
+  }
+  .company div h2 {
+    font-size: 22px;
+  }
+  .company div p {
+    font-size: 14px;
+  }
+  .pres section p,
+  .devs section p {
+      font-size: 13px;
+  }
+  .contactInfo h2 {
+    font-size: 23px;
+  }
+  .contactInfo p {
+    font-size: 18px;
+  }
+  .last div h2 mark{
+    font-size: 35px;
+  }
+  .last img {
+    height: 100px;
+    width: auto;
+  }
+  .endOfProduct h2 mark{
+    font-size: 20px;
+  }
+}
